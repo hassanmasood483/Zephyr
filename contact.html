@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Mr+Dafoe&family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <title>Zephyr/Contact Us</title>
+</head>
+<body>
+    <section class="contactus_container"> 
+        <h2>HOW CAN I CONTACT ZEPHYR CUSTOMER SERVICE DEPARTMENT?</h2>
+    <p>You can contact us with any questions related to online sales through the following channels: <br>
+        UAN: +92 342 4111849<br>
+        Our social media pages on Facebook, Instagram etc. <br>
+        By emailing us on contactus@Zephyr.com<br>
+        Customer Service Department Hours: Monday to Friday from 9.00 to 5.30 PST</p>
+
+        <h2>HOW CAN I FILE A COMPLAINT ABOUT A STORE?</h2>
+        <p>
+            You can contact our Customer Service department department at our UAN: +92-42-111-11 6387</p>
+        <h2>HOW CAN I SUGGEST IMPROVEMENTS?</h2>
+        <p>You can send us your suggestions using all the contact mediums mentioned above. We would be happy to receive your comments and suggestions.</p>
+        </section>
+
+        <section class="contact">
+
+            <div class="contact_container">
+                <h1 class="contact">Contact Us</h1>
+                <form id="contact-form" action="#" method="post">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <div class="error" id="email-error"></div>
+                    <button type="submit">Submit <i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div id="subscription-message" style="display: none;">Thanks for subscribing!</div>
+                <div class="footer">
+                    <a href="https://www.facebook.com/profile.php?id=100007652505549&mibextid=9R9pXO"> <i class="footer fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/asadtahirr?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><i class="footer fa-brands fa-instagram"></i></a>
+                    <i class="footer fa-brands fa-twitter"></i>
+                    <i class="footer fa-brands fa-whatsapp"></i>
+                    <i class="footer fa-brands fa-pinterest"></i>
+                    <p class="custompara">©2023 Zephyr.co</p>
+                </div>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("contact-form");
+                const emailInput = document.getElementById("email");
+                const emailError = document.getElementById("email-error");
+                const subscriptionMessage = document.getElementById("subscription-message");
+    
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+    
+                    // Regular expression to validate email syntax
+                    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    
+                    const email = emailInput.value.trim();
+    
+                    if (!emailPattern.test(email)) {
+                        emailError.textContent = "Invalid email format";
+                        emailInput.focus();
+                    } else {
+                        // Hide the submit button and display the thank you message
+                        form.style.display = "none";
+                        subscriptionMessage.style.display = "block";
+                    }
+                });
+            });
+        </script>
+    
+</body>    
